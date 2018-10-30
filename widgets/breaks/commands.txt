@@ -1,0 +1,21 @@
+#reset
+curl -X POST http://127.0.0.1:3030/widgets/breaks -d "{\"value\":-1,\"auth_token\":\"YOUR_AUTH_TOKEN\"}"
+
+
+#log one
+curl -X POST http://127.0.0.1:3030/widgets/breaks -d "{\"auth_token\":\"YOUR_AUTH_TOKEN\"}"
+
+
+
+#works with the above
+class Dashing.Breaks extends Dashing.Widget
+
+  ready: ->
+    if not @get('value')
+      @set 'value', 0
+
+  onData: (data) ->
+    if data
+      i = parseInt(@get('value'))
+      i = i + 1
+      @set 'value', i
