@@ -1,5 +1,26 @@
 .widget-breaks {
-  background: #00ff99;
-  font-size: 65px;
+  background: teal;
+  font-size: 90px;
   font-weight: bold;
+  line-height:30px;
+  
+	.title {
+		font-size: 50px;
+	  }
+
+	.header {
+		font-size: 30px;
+	  }
+
+	.footer {
+		font-size: 20px;
+	  }
+}
+
+.danger{
+	background: teal;
+}
+
+.done{
+	background: teal;
 }
